@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doULoveMe</title>
+</head>
+<style>
+    #numNo {
+        position: absolute;
+    }
+</style>
+<body>
+<h1>Do you love me?</h1><br/>
+<button id="numYes" type="button" style="width: 50px" onclick="numYes()">Yes</button>
+<button id="numNo" type="button" style="width: 50px" onmouseover="numNo()">No</button>
+<script>
+    function numYes() {
+        alert("You made your best choice <3");
+    }
+    function numNo() {
+        var a=parseInt(window.innerHeight);
+        var b=parseInt(window.innerWidth);
+        var ran1=Math.floor(Math.random()*600);
+        var ran2=Math.floor(Math.random()*1500);
+        /*var top=a-ran;
+        var left=b-ran;*/
+        var index=document.getElementById("numNo");
+        index.style.top=ran1+"px";
+        index.style.left=ran2+"px";
+    }
+</script>
+</body>
+</html>
